@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 760" role="img" aria-labelledby="title desc">
+  <title id="title">카르디아 도시 문장</title>
+  <desc id="desc">네 세력이 둘러싼 마법 도시와 인장을 추상적으로 표현한 장식 이미지</desc>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="44%" r="58%">
+      <stop offset="0" stop-color="#f7e39d"/>
+      <stop offset="0.32" stop-color="#d8ac52"/>
+      <stop offset="0.72" stop-color="#5c3a24"/>
+      <stop offset="1" stop-color="#111217"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2d989"/>
+      <stop offset="0.5" stop-color="#8d6431"/>
+      <stop offset="1" stop-color="#f2d989"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="760" height="760" fill="none"/>
+  <g filter="url(#shadow)">
+    <circle cx="380" cy="380" r="310" fill="#171b24" stroke="url(#ring)" stroke-width="18"/>
+    <circle cx="380" cy="380" r="250" fill="url(#core)" opacity="0.95"/>
+    <circle cx="380" cy="380" r="184" fill="#18222a" stroke="#f2d989" stroke-width="8" opacity="0.88"/>
+  </g>
+  <g opacity="0.95">
+    <path d="M380 108L430 246H330Z" fill="#5476c9"/>
+    <path d="M652 380L514 430V330Z" fill="#c69a3b"/>
+    <path d="M380 652L330 514H430Z" fill="#52a36f"/>
+    <path d="M108 380L246 330V430Z" fill="#c75252"/>
+  </g>
+  <g fill="#f7f0df">
+    <path d="M282 492V344H324V286H372V220H410V286H458V344H500V492Z" opacity="0.94"/>
+    <path d="M252 492H528V532H252Z" opacity="0.94"/>
+    <circle cx="380" cy="372" r="42" fill="#111217"/>
+    <circle cx="380" cy="372" r="24" fill="#d8ac52"/>
+  </g>
+  <g fill="none" stroke="#f2d989" stroke-width="10" stroke-linecap="round" opacity="0.72">
+    <path d="M208 208L278 278"/>
+    <path d="M552 208L482 278"/>
+    <path d="M552 552L482 482"/>
+    <path d="M208 552L278 482"/>
+  </g>
+  <g fill="#111217" opacity="0.65">
+    <circle cx="380" cy="112" r="18"/>
+    <circle cx="648" cy="380" r="18"/>
+    <circle cx="380" cy="648" r="18"/>
+    <circle cx="112" cy="380" r="18"/>
+  </g>
+</svg>
