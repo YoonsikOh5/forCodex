@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>검은 저택의 마지막 방</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="room-stage" aria-label="미스터리 방탈출 플레이 화면">
+        <img
+          class="room-art"
+          src="assets/mystery-room.svg"
+          alt="어두운 탐정 서재. 책장, 초상화, 책상, 금고, 잠긴 문이 보인다."
+        >
+
+        <button class="hotspot hotspot-desk" type="button" data-target="desk" aria-label="책상 조사">
+          <span>책상</span>
+        </button>
+        <button class="hotspot hotspot-portrait" type="button" data-target="portrait" aria-label="초상화 조사">
+          <span>초상화</span>
+        </button>
+        <button class="hotspot hotspot-shelf" type="button" data-target="bookshelf" aria-label="책장 조사">
+          <span>책장</span>
+        </button>
+        <button class="hotspot hotspot-safe" type="button" data-target="safe" aria-label="금고 조사">
+          <span>금고</span>
+        </button>
+        <button class="hotspot hotspot-door" type="button" data-target="door" aria-label="잠긴 문 조사">
+          <span>문</span>
+        </button>
+
+        <section class="case-strip" aria-live="polite">
+          <p class="case-label">CASE 1932</p>
+          <h1>검은 저택의 마지막 방</h1>
+          <p id="stageStatus">실종된 탐정의 서재에서 단서를 찾아 마지막 문을 열어라.</p>
+        </section>
+      </main>
+
+      <aside class="case-panel" aria-label="수사 노트">
+        <div class="panel-section">
+          <p class="eyebrow">수사 노트</p>
+          <h2>남은 목표</h2>
+          <p id="objectiveText">방 안의 물건을 조사해서 범인의 이름과 문을 여는 근거를 찾아야 한다.</p>
+        </div>
+
+        <div class="panel-section">
+          <div class="section-head">
+            <h2>진행도</h2>
+            <span id="progressCount">0/4</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span class="progress-fill" id="progressFill"></span>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2>확보한 단서</h2>
+          <ul class="evidence-list" id="evidenceList">
+            <li class="empty-note">아직 단서가 없다.</li>
+          </ul>
+        </div>
+
+        <div class="panel-section">
+          <h2>기록</h2>
+          <ol class="log-list" id="logList">
+            <li>방의 전등이 깜박이고, 문은 안쪽에서 잠겨 있다.</li>
+          </ol>
+        </div>
+
+        <div class="control-row">
+          <button class="secondary-button" type="button" id="hintButton">힌트</button>
+          <button class="secondary-button" type="button" id="resetButton">처음부터</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="icon-button close-button" type="button" id="closeModal" aria-label="닫기">×</button>
+        <p class="eyebrow" id="modalKicker">조사</p>
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+        <div class="modal-actions" id="modalActions"></div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
